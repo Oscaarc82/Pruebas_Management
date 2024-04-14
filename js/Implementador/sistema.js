@@ -363,7 +363,7 @@ $(document).ready(function () {
         var dia = nvaFecha.getDay();
 
         var newFecha = anio + "-" + (mes < 10 ? '0' : '') + mes + "-" + (dia < 10 ? '0' : '') + dia;
-        console.log(newFecha)
+        //console.log(newFecha)
 
         var historias = $('#tblReporteAgendadas input[type="checkbox"]:checked').map(function () {
             return this.value;

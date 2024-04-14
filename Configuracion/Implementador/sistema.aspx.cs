@@ -257,6 +257,7 @@ public partial class Configuracion_Implementador_sistema : System.Web.UI.Page
     public static bool liberarHistoria(string newFecha, int idEstatus, string historias)
     {
         controller = new ControllerReportes();
+
         return controller.LiberarHistoria(newFecha, historias, idEstatus);
     }
 }
