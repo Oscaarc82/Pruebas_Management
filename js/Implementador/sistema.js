@@ -359,11 +359,11 @@ $(document).ready(function () {
 
         var nvaFecha = new Date()
         var anio = nvaFecha.getFullYear();
-        var mes = nvaFecha.getMonth();
-        var dia = nvaFecha.getDay();
+        var mes = nvaFecha.getMonth() + 1;
+        var dia = nvaFecha.getDate() + 1;
 
-        //var newFecha = anio + "-" + (mes < 10 ? '0' : '') + mes + "-" + (dia < 10 ? '0' : '') + dia;
-        //console.log(newFecha)
+        var newFecha = anio + "-" + (mes < 10 ? '0' : '') + mes + "-" + (dia < 10 ? '0' : '') + dia;
+        console.log(newFecha)
 
         var historias = $('#tblReporteAgendadas input[type="checkbox"]:checked').map(function () {
             return this.value;
