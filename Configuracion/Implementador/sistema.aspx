@@ -5,7 +5,7 @@
     <title>Historias de Usuario</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
-    <script src="/JS/Implementador/sistema.js" type="text/javascript"></script>
+    <script src="/../../js/Implementador/sistema.js" type="text/javascript"></script>
     <script src="../../js/site.js" type="text/javascript"></script>
     <link href="../../css/implementadorcss/styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
@@ -14,7 +14,8 @@
         .pdtes {
             width: 240px;
             height: 55px;
-            border-radius: 15px;
+            border-radius: 20px;
+            margin-bottom: 30px;
         }
 
         label#icon-25.tipo-ticket.verde {
@@ -43,16 +44,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <!-- Separadores -->
     <div>
-        <div class="clear"><br /></div>
-        <div class="clear"><br /></div>
-        <div class="clear"><br /></div>
-        <div class="clear"><br /></div>
-        <div class="clear"><br /></div>
-        <div class="clear"><br /></div>
     </div>
 
     <!-- Botones para mostrar los sistemas -->
-    <label id="lblEtiquetas" class="labelsPrincipales">
+    <label id="lblEtiquetas" class="labelsPrincipales justify-content-center">
         <a href="#" onclick="mostrarSistemasNoAgendadas('sistemaSinAgendar'); return false;" class="divBlanco pdtes">
             <label id="icon-25" class="asig_equipo verde tipo-ticket">
                 SIN AGENDAR
@@ -118,12 +113,14 @@
                                     <option value="100">100</option>
                                 </select> entries
                             </label>
+                            <div id="tblReporteAgendadas_filter" class="dataTables_filter">
+                                <label>
+                                    Search:
+                                    <input type="search" class="" placeholder="" aria-controls="tblReporteAgendadas">
+                                </label>
+                            </div>
                         </div>
-                        <div id="tblReporteAgendadas_filter" class="dataTables_filter">
-                            <label>Search:
-                                <input type="search" class="" placeholder="" aria-controls="tblReporteAgendadas">
-                            </label>
-                        </div>
+                        
                     </div>
             <!-- Aquí se llenará la tabla de historias agendadas correspondientes al sistema -->
             <table id="tblReporteAgendadas" class="data_grid display dataTable" role="grid" aria-describedby="tblReporteAgendadas_info" style="width: 1301px;">
@@ -135,16 +132,16 @@
                         <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 104.083px;" aria-label="Tipo Reporte: activate to sort column ascending">
                             Folio
                         </th>
-                        <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 119.083px;" aria-label="Grupo: activate to sort column ascending">
+                        <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 208.083px;" aria-label="Grupo: activate to sort column ascending">
                             Descripción
                         </th>
-                        <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 389.083px;" aria-label="Asunto: activate to sort column ascending">
+                        <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 109.083px;" aria-label="Asunto: activate to sort column ascending">
                             Grupo
                         </th>
                         <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 74.0833px;" aria-label="Prioridad: activate to sort column ascending">
                             Puntos De Historia
                         </th>
-                        <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 79.0833px;" aria-label="Sistema/Área: activate to sort column ascending">
+                        <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 149.0833px;" aria-label="Sistema/Área: activate to sort column ascending">
                             Fecha Propuesta Owner
                         </th>
                          <th class="txt-left col-reporte sorting" tabindex="0" aria-controls="tblReporteAgendadas" rowspan="1" colspan="1" style="width: 50px;" aria-label="Seleccionar:">
@@ -238,12 +235,14 @@
                                 <option value="100">100</option>
                             </select> entries
                         </label>
+                        <div id="tblReporteLiberadas_filter" class="dataTables_filter">
+                            <label>
+                                Search:
+                                <input type="search" class="" placeholder="" aria-controls="tblReporteLiberadas">
+                            </label>
+                        </div>
                     </div>
-                    <div id="tblReporteLiberadas_filter" class="dataTables_filter">
-                        <label>Search:
-                            <input type="search" class="" placeholder="" aria-controls="tblReporteLiberadas">
-                        </label>
-                    </div>
+                    
                 </div>
             <!-- Aquí se llenará la tabla de historias liberadas correspondientes al sistema -->
             <table id="tblReporteLiberadas" class="data_grid display dataTable" role="grid" aria-describedby="tblReporteLiberadas_info" style="width: 1301px;">

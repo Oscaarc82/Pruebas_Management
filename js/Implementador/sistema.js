@@ -228,7 +228,7 @@ function ObtenerNombresHistoriasLiberadas(id) {
                 // Iterar sobre los datos y crear labels para cada nombre de sistema
                 data.forEach(function (nombreSistema) {
                     // Crear label con el nombre del sistema
-                    var labelSistema = $('<label>').text(nombreSistema).addClass('divBlanco pdtes asig_equipo');
+                    var labelSistema = $('<label>').text(nombreSistema).addClass('configuracion divBlanco pdtes asig_equipo');
 
                     // Agregar label al contenedor
                     sistemaDiv.append(labelSistema);
